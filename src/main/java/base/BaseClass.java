@@ -7,18 +7,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseClass {
 
 
-    public  static WebDriver driver=null;
-    public static Scenario scenario=null;
+    public  static WebDriver driver;
+    public static Scenario scenario;
 
 
     @Before
     public void LunchBrowser(Scenario scenario){
 
+    	
         System.out.println(scenario.getName());
 
         WebDriverManager.chromedriver().setup();
@@ -26,7 +28,7 @@ public class BaseClass {
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.get("https://naveenautomationlabs.com/gitcourse/");
+  
     }
 
     @After
@@ -38,19 +40,15 @@ public class BaseClass {
             byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","source");
         }
+        
         driver.quit();
     }
-
-    public static void WebCapture(WebDriver driver, String fileName) {
-//	public static void WebCapture(BaseClass driver, String fileName) {
-        Scenario scenario1;
-        try {
-            byte[] source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(source, "image/png", "source");
-
-        } catch (Exception e) {
-            System.out.println("Error While Taking Screenshot "+ e.getMessage());
-            e.printStackTrace();
-        }
-    }
+    
+    
+    
+    
+    
+    
+   
+    
 }

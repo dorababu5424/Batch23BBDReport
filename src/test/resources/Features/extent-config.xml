@@ -17,10 +17,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>DockWalk TestAutomation</documentTitle>
+        <documentTitle>BATCH 23 TestAutomation</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>DockWalk Test Automation Report</reportName>
+        <reportName>BATCH 23 Test Automation Report</reportName>
 
         <!-- timestamp format -->
         <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>

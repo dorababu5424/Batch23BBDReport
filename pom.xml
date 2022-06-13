@@ -125,6 +125,25 @@
 		</dependency>
 		
 		
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+
+		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.3.0</version>
+	
+		</dependency>
+		
+		
 	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
